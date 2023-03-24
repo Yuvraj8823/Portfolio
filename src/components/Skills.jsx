@@ -1,0 +1,50 @@
+import React from "react"
+import Tilt from "react-parallax-tilt"
+import { motion } from "framer-motion"
+
+
+import { skills } from "../constants"
+import { fadeIn, textVariant } from "../utils/motion"
+import { SectionWrapper } from "../hoc"
+
+const Skills = () => (
+    <>
+    
+      
+      <div className="flex  flex-wrap gap-10 justify-evenly">
+        
+        {skills.map((skills,index) => (
+          
+          <SkillsCard key={skills.title} index={index} {...skills}/>
+          
+        ))}
+      </div>
+    </>
+)
+
+const SkillsCard = (props) =>{
+  return(
+    <Tilt className='xs:w-[200px] w-full xl:w-[20rem] '>
+      <motion.div
+      variants={fadeIn("right","spring",0.5 * props.index, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card  cursor-pointer h-[20rem]"
+      >
+        <div options={{
+          max:45,
+          scale:1,
+          speed:450
+        }}
+        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col h-full">
+          <h1 className="text-white font-bold text-[1.5rem]">{props.title}</h1>
+          {
+            props.content.map((content,index)=>(
+              <h6 className="text-secondary text-[1rem]" >{index+1}. {content}</h6>
+            ))
+          }
+        </div>
+      </motion.div>
+    </Tilt>
+  )
+}
+
+export default SectionWrapper(Skills,"")
