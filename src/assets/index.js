@@ -6,7 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import greenergy from "./greenergy.jpg";
+import greenergy from "./greenergy.png";
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -20,8 +20,8 @@ import threejs from "./tech/threejs.svg";
 import udemy from "./company/udemy.png"
 import meta from "./company/meta.png";
 import acm from "./company/acm.png"
-import portfolio from "./portfolio.jpg"
-import aimaze from "./ai-maze.jpg";
+import portfolio from "./portfolio.png"
+import aimaze from "./ai-maze.png";
 import next from "./tech/nextjs.png"
 import flutter from "./tech/flutter.png"
 import ethereum from "./tech/ethereum.png"
