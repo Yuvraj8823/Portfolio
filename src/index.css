@@ -203,14 +203,15 @@
   }
 }
 
-
-
 @media (max-width:500px) {
   .cards{
     width: 360px;
   }
   .boxanimate{
     bottom:225px;
+  }
+  .anima{
+    font:123px;
   }
 }
 

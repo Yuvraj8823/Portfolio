@@ -6,11 +6,12 @@ import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
-import { serviceKey, templateKey, publicKey } from './key'
+
 
 
 
 const Contact = () => {
+  console.log(import.meta)
   const formRef = useRef()
   const [form,setForm]= useState({
     name: '',
@@ -25,8 +26,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
-    emailjs.send(serviceKey,
-    templateKey,
+    emailjs.send(import.meta.env.VITE_SERVICE_KEY,
+    import.meta.env.VITE_TEMPLATE_KEY,
     {
       from_name:form.name,
       to_name:'Yuvraj',
@@ -34,7 +35,7 @@ const Contact = () => {
       to_email: 'y.s.raghuwanshi03@gmail.com',
       message:form.message,
     },
-    publicKey
+    import.meta.env.VITE_PUBLIC_KEY
     ).then(()=>{
       setLoading(false)
       alert('Thank you. I will get back to you as soon as possible')
