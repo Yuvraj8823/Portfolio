@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { ComputersCanvas } from './canvas'
-
+import { resume } from '../assets'
 const Hero = () => {
   const windowWidth = useRef(window.innerWidth);
   return (
@@ -34,7 +34,11 @@ const Hero = () => {
         </a>
         
       </div>
-      </>:<></>}
+      </>:<>
+      <div className='flex w-full justify-center absolute top-[25rem] items center'>
+      <a href={resume} download="resume.pdf" className='mt-10 m-auto inline-block'><button className='bg-[#915eff] hover:bg-[#4d2c95] text-white font-bold py-2 px-4 rounded'>Resume</button></a>
+      </div>
+      </>}
       
     </section>
   )

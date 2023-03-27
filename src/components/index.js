@@ -6,7 +6,7 @@ import Tech from './Tech';
 import Experience from './Experience';
 import Certifications from './Certifications';
 import Works from './Works';
-
+import DevCard from './DevCard';
 import Contact from './Contact';
 import Footer from './Footer';
 import Skills from './Skills'
@@ -20,7 +20,7 @@ export {
   Experience,
   Certifications,
   Works,
-
+  DevCard,
   Contact,
   Footer,
   EarthCanvas, 

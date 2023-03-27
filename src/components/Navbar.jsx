@@ -22,10 +22,10 @@ const Navbar = () => {
         }
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-cover " />
-          <pre className='text-white text-[18px] font-bold cursor-pointer flex'> Yuvraj <span className='md:block hidden'>| Web Developer </span></pre>
+          <pre className='text-white text-[18px] font-bold cursor-pointer flex'> Yuvraj <span className='ipad:block hidden'>| Web Developer </span></pre>
         </Link>
         
-        <ul className='list-none hidden md:flex flex-row gap-10 items-center'>
+        <ul className='list-none hidden ipad:flex flex-row gap-10 items-center'>
           
           {navLinks.map(link=>(
             
@@ -37,7 +37,7 @@ const Navbar = () => {
           ))}
           <li key="resume"><a href={resume} download="resume.pdf"><button className='bg-[#915eff] hover:bg-[#4d2c95] text-white font-bold py-2 px-4 rounded'>Resume</button></a></li>
         </ul>
-        <div className='md:hidden flex flex-1 justify-end items-center'>
+        <div className='ipad:hidden flex flex-1 justify-end items-center'>
           <img src={toggle ? close : menu} alt="menu" className='width-[28px] height-[28px] object-contain cursor-pointer' onClick={()=>{setToggle(!toggle)}}/>
         </div>
         <div className={`${!toggle? 'hidden': 'flex'} p-6 black-gradient absolute top-20 right-0 my-2 min-w[140px] z-10 rounded-xl`}>

@@ -1,6 +1,6 @@
 import { useRef } from "react"
 import { BrowserRouter } from "react-router-dom"
-import { About, Contact, Experience, Hero, Navbar , Tech, Works, StarsCanvas, Certifications, Footer, Skills } from './components'
+import { About, Contact, Experience, Hero, Navbar , Tech, Works, StarsCanvas, Certifications, Footer, Skills, DevCard } from './components'
 const App = () => {
   const width = useRef(window.innerWidth);
  
@@ -14,6 +14,7 @@ const App = () => {
           <Hero />
         </div>
         <About />
+        <DevCard />
         <Skills />
         {width.current>900?<Tech />:<></>}
         
