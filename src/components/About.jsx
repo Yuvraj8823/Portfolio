@@ -1,17 +1,19 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Tilt from 'react-parallax-tilt'
 import { motion } from 'framer-motion'
 import { SectionWrapper } from '../hoc'
 import { styles } from '../styles'
 import { services } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
+import { width } from '@mui/system'
 const ServiceCard = (service) =>{
+  
   return(
 
-    <Tilt className='xs:w-[250px] w-full '>
+
       <motion.div
       variants={fadeIn("right","spring",0.5 * service.index, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:scale-[1.1] cursor-pointer"
+      className="xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card hover:scale-[1.1] cursor-pointer"
       >
         <div options={{
           max:45,
@@ -23,12 +25,12 @@ const ServiceCard = (service) =>{
           <h3 className='text-white text-[20px] font-bold text-center'>{service.title}</h3>
         </div>
       </motion.div>
-    </Tilt>
+    
 
   )
 }
 const About = () => {
-  
+  const width = useRef(window.innerWidth)
   return (
     <>
     <motion.div id='about' variants={textVariant()} >
@@ -41,11 +43,15 @@ const About = () => {
       </motion.p>
       <div className="flex mt-20 flex-wrap gap-10 justify-center">
         
-        {services.map((service,index) => (
-          
+        {services.map((service,index) => {
+          return width.current>900?(
+            <Tilt>
+              <ServiceCard key={service.title} index={index} {...service}/>
+            </Tilt>
+          ):(
           <ServiceCard key={service.title} index={index} {...service}/>
-          
-        ))}
+          )
+          })}
       </div>
     
     </>

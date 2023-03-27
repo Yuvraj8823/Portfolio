@@ -1,9 +1,11 @@
+import { useRef } from "react"
 import { BrowserRouter } from "react-router-dom"
 import { About, Contact, Experience, Hero, Navbar , Tech, Works, StarsCanvas, Certifications, Footer, Skills } from './components'
 const App = () => {
-  
-
+  const width = useRef(window.innerWidth);
+ 
   return (
+
     <div>
       <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -13,7 +15,8 @@ const App = () => {
         </div>
         <About />
         <Skills />
-        <Tech />
+        {width.current>900?<Tech />:<></>}
+        
         <Experience />
         <Certifications />
         <Works />

@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useRef} from "react"
 import Tilt from "react-parallax-tilt"
 import { motion } from "framer-motion"
 
@@ -7,27 +7,36 @@ import { skills } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
 import { SectionWrapper } from "../hoc"
 
-const Skills = () => (
+const Skills = () => {
+    const width = useRef(window.innerWidth)
+    return(
     <>
     
-      
+    
       <div className="flex  flex-wrap gap-10 justify-evenly">
         
-        {skills.map((skills,index) => (
+        {skills.map((skills,index) => { 
           
+          return width.current<900?(
           <SkillsCard key={skills.title} index={index} {...skills}/>
-          
-        ))}
+          ):(<Tilt className=' '>
+            <SkillsCard key={skills.title} index={index} {...skills}/>
+            </Tilt>
+            )
+        })}
       </div>
     </>
-)
+    )
+}
 
 const SkillsCard = (props) =>{
+    
   return(
-    <Tilt className='xs:w-[200px] w-full xl:w-[20rem] '>
+    
+    
       <motion.div
       variants={fadeIn("right","spring",0.5 * props.index, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card  cursor-pointer h-[20rem]"
+      className="xs:w-[200px] w-full xl:w-[20rem]  green-pink-gradient p-[1px] rounded-[20px] shadow-card  cursor-pointer h-[20rem]"
       >
         <div options={{
           max:45,
@@ -43,7 +52,7 @@ const SkillsCard = (props) =>{
           }
         </div>
       </motion.div>
-    </Tilt>
+
   )
 }
 
