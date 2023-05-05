@@ -15,7 +15,7 @@ import {
     git,
     flutter,
     meta,
-
+    techlive,
     acm,
     udemy,
 
@@ -156,7 +156,30 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Yuvraj8823/portfolio",
+      url:"https://yuvrajsr.me/",
+    },
+    {
+      name: "Tech.Live",
+      description:
+        "A blog website which will keep you updated about everything related to tech. Also it will provide you multiple advanced projects with source code and end-to-end explanation",
+      tags: [
+        {
+          name: "nextjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Graph-QL",
+          color: "green-text-gradient",
+        },
+        {
+          name: "graph-cms",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: techlive,
+      source_code_link: "https://github.com/Yuvraj8823/techlive",
+      url:"https://techlive.vercel.app/",
     },
     {
       name: "Ai-Maze",
@@ -178,27 +201,7 @@ import {
       ],
       image: aimaze,
       source_code_link: "https://github.com/Yuvraj8823/image-enhancer",
-    },
-    {
-      name: "Greenergy",
-      description:
-        "A Community based web application with built-in marketplace where people can buy and sell green energy product and can also collab together to raise awareness about green energy resources",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "materialui",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: greenergy,
-      source_code_link: "https://github.com/Yuvraj8823/Project-for-FRCC-Hackathon",
+      url:"https://i-maze.vercel.app/",
     },
   ];
   

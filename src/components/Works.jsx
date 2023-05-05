@@ -20,6 +20,7 @@ const ProjectCard = (props) => {
           }}
           className="bg-tertiary p-5 rounded-2xl sm:w-[360px] h-full cards w-[300px] "
         >
+          <a href={props.url} className='cursor-pointer' target='_blank'>
           <div className="relative w-full h-[180px] ">
             <img
               src={props.image}
@@ -46,6 +47,7 @@ const ProjectCard = (props) => {
               </p>
             ))}
           </div>
+          </a>
         </Tilt>
       </motion.div>
     </>

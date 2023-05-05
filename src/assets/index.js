@@ -26,7 +26,7 @@ import next from "./tech/nextjs.png"
 import flutter from "./tech/flutter.png"
 import ethereum from "./tech/ethereum.png"
 import resume from "./resume.pdf"
-
+import techlive from "./techlive.png"
 export {
   logo,
   backend,
@@ -55,5 +55,6 @@ export {
   next,
   flutter,
   ethereum,
-  resume
+  resume,
+  techlive
 };
