@@ -256,7 +256,7 @@ import {
     },
     {
       title: "Libraries",
-      content: ["React.js","Three.js","Framer-Motion","Ethers.js","Tensorflow.js"]
+      content: ["React.js","Three.js","Framer-Motion","jquery","Gsap"]
     },
     {
       title:"Frameworks",
