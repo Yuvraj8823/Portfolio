@@ -45,16 +45,16 @@ import {
   
   const services = [
     {
-      title: "Blockchain Developer",
-      icon: web,
+      title: "Full-stack Web Developer",
+      icon: backend,
     },
     {
       title: "Flutter Developer",
       icon: mobile,
     },
     {
-      title: "Full-stack Developer",
-      icon: backend,
+      title: "Programmer",
+      icon: web,
     },
     {
       title: "Gamer",
